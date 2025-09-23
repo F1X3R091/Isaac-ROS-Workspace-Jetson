@@ -1,0 +1,21 @@
+ARG BASE_IMAGE=ubuntu:22.04
+FROM ${BASE_IMAGE}
+
+# Download dependencies for zed SDK
+RUN apt-get install -y --no-install-recommends \
+    lsb-release \
+    wget \
+    less \
+    zstd \
+    udev \
+    sudo \
+    apt-transport-https
+
+# ZED SDK 
+RUN --mount=type=cache,target=/var/cache/apt \
+    wget -q --no-check-certificate -O ZED_SDK_Linux.run https://download.stereolabs.com/zedsdk/4.2/cu12/ubuntu22 \
+    && chmod +x ./ZED_SDK_Linux.run \
+    && ./ZED_SDK_Linux.run silent skip_od_module skip_python skip_cuda 
+
+RUN ln -sf /lib/x86_64-linux-gnu/libusb-1.0.so.0 /usr/lib/x86_64-linux-gnu/libusb-1.0.so
+

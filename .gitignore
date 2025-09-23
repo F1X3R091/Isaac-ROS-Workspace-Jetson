@@ -1,0 +1,14 @@
+**/build/
+**/install/
+**/log/
+.vscode/
+.mypy_cache/
+**/__pycache__/
+.gemini/
+GEMINI.md
+venv/
+.claude/
+CLAUDE.md
+docker-compose.override.yml
+isaac_ros_assets
+src/datasets

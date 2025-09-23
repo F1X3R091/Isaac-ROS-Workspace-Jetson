@@ -1,0 +1,8 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: rosbags in /usr/local/lib/python3.10/dist-packages (0.10.10)
+Requirement already satisfied: lz4 in /usr/local/lib/python3.10/dist-packages (from rosbags) (4.4.4)
+Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from rosbags) (1.26.4)
+Requirement already satisfied: ruamel.yaml in /usr/local/lib/python3.10/dist-packages (from rosbags) (0.18.14)
+Requirement already satisfied: typing_extensions>=4.5 in /usr/local/lib/python3.10/dist-packages (from rosbags) (4.14.1)
+Requirement already satisfied: zstandard in /usr/local/lib/python3.10/dist-packages (from rosbags) (0.23.0)
+Requirement already satisfied: ruamel.yaml.clib>=0.2.7 in /usr/local/lib/python3.10/dist-packages (from ruamel.yaml->rosbags) (0.2.12)
